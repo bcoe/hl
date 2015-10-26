@@ -39,7 +39,8 @@
     "language-ini": "^1.12.0",
     "language-rust": "^0.4.5",
     "language-stylus": "^0.5.2",
-    "lodash": "^3.10.1"
+    "lodash": "^3.10.1",
+    "yargs": "^3.29.0"
   },
   "devDependencies": {
     "coveralls": "^2.11.4",
