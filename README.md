@@ -9,12 +9,13 @@ Provides syntax highlighting for:
 * JSON
 * ObjectiveC
 * CPP
+* Markdown
 
 Open an issue or pull-request if we're missing a language you'd like to see!
 
 ## Usage
 
-```
+```sh
 npm install hl -g
 hl index.js
 hl main.rb

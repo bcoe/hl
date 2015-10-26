@@ -24,6 +24,8 @@ languages.forEach(function (language) {
 })
 
 var opts = {
+  'escape.character': 'gray',
+  'meta.preprocessor': 'blue',
   numeric: 'magenta',
   comment: 'gray',
   support: 'yellow',
@@ -41,7 +43,7 @@ var opts = {
   null: 'green',
   constant: 'green',
   link: 'blue',
-  'meta.preprocessor': 'blue'
+  heading: 'bold'
 }
 
 var hl = function (file, _opts) {
@@ -59,7 +61,8 @@ function hlCode (code, file) {
 var mappings = {
   '.rb': '.ruby',
   '.h': '.objc',
-  '.m': '.objc'
+  '.m': '.objc',
+  '.md': '.gfm'
 }
 
 hl.map = function (file) {
