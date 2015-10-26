@@ -1,10 +1,8 @@
 var _ = require('lodash')
 var chalk = require('chalk')
 var cheerio = require('cheerio')
-var fs = require('fs')
 var Highlights = require('highlights')
 var highlighter = new Highlights()
-var path = require('path')
 
 var languages = [
   'atom-language-nginx',
@@ -46,15 +44,15 @@ var opts = {
   heading: 'bold'
 }
 
-var hl = function (file, _opts) {
+var hl = function (code, extension, _opts) {
   _.extend(opts, _opts)
-  return hl.chalkify(hlCode(fs.readFileSync(file, 'utf-8'), file), opts)
+  return hl.chalkify(hlCode(code, extension), opts)
 }
 
-function hlCode (code, file) {
+function hlCode (code, extension) {
   return highlighter.highlightSync({
     fileContents: code,
-    scopeName: hl.map(file)
+    scopeName: hl.map(extension)
   })
 }
 
@@ -65,8 +63,8 @@ var mappings = {
   '.md': '.gfm'
 }
 
-hl.map = function (file) {
-  var extension = path.extname(file)
+hl.map = function (extension) {
+  if (extension.indexOf('.') === -1) extension = '.' + extension
   return 'source' + (mappings[extension] || extension)
 }
 

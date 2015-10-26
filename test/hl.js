@@ -6,9 +6,9 @@ var hl = require('../')
 describe('hl', function () {
   describe('map', function () {
     it('maps common extensions to highlights extension', function () {
-      assert.equal(hl.map('test.m'), 'source.objc')
-      assert.equal(hl.map('test.rb'), 'source.ruby')
-      assert.equal(hl.map('test.json'), 'source.json')
+      assert.equal(hl.map('.m'), 'source.objc')
+      assert.equal(hl.map('.rb'), 'source.ruby')
+      assert.equal(hl.map('.json'), 'source.json')
     })
   })
 

@@ -2,6 +2,10 @@
 
 Use Atom's syntax-highlighter from the command line.
 
+```sh
+npm install hl -g
+```
+
 Provides syntax highlighting for:
 
 * JavaScript
@@ -16,11 +20,16 @@ Open an issue or pull-request if we're missing a language you'd like to see!
 ## Usage
 
 ```sh
-npm install hl -g
 hl index.js
 hl main.rb
 hl foo.m
 hl package.json
+```
+
+You can also use unix pipes:
+
+```sh
+cat index.rb | hl --extension=rb
 ```
 
 <img width="500" src="screen.png">
