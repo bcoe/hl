@@ -6,7 +6,8 @@
   "bin": "./bin/hl.js",
   "scripts": {
     "pretest": "standard",
-    "test": "nyc mocha"
+    "test": "nyc mocha",
+    "coverage": "nyc --reporter=text-lcov mocha | coveralls"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
     "lodash": "^3.10.1"
   },
   "devDependencies": {
+    "coveralls": "^2.11.4",
     "mocha": "^2.3.3",
     "nyc": "^3.2.2",
     "standard": "^5.3.1"

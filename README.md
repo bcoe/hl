@@ -6,6 +6,8 @@ Use Atom's syntax-highlighter from the command line.
 npm install hl -g
 ```
 
+<img width="500" src="screen.png">
+
 Provides syntax highlighting for:
 
 * JavaScript
@@ -15,7 +17,7 @@ Provides syntax highlighting for:
 * CPP
 * Markdown
 
-Open an issue or pull-request if we're missing a language you'd like to see!
+Open an [issue](https://github.com/bcoe/hl/issues/new) or [pull-request](https://github.com/bcoe/hl/compare) if we're missing a language you'd like to see!
 
 ## Usage
 
@@ -29,10 +31,8 @@ hl package.json
 You can also use unix pipes:
 
 ```sh
-cat index.rb | hl --extension=rb
+cat index.rb | hl --extension=rb --pipe
 ```
-
-<img width="500" src="screen.png">
 
 ## API
 
