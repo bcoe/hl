@@ -20,6 +20,7 @@ Provides syntax highlighting for:
 * ObjectiveC
 * CPP
 * Markdown
+* Python
 
 Open an [issue](https://github.com/bcoe/hl/issues/new) or [pull-request](https://github.com/bcoe/hl/compare) if we're missing a language you'd like to see!
 
