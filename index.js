@@ -24,6 +24,7 @@ languages.forEach(function (language) {
 var opts = {
   'escape.character': 'gray',
   'meta.preprocessor': 'blue',
+  'entity.class': 'bold',
   numeric: 'magenta',
   comment: 'gray',
   support: 'yellow',
@@ -60,7 +61,8 @@ var mappings = {
   '.rb': '.ruby',
   '.h': '.objc',
   '.m': '.objc',
-  '.md': '.gfm'
+  '.md': '.gfm',
+  '.py': '.python'
 }
 
 hl.map = function (extension) {
