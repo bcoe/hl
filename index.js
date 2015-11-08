@@ -57,7 +57,7 @@ function hlCode (code, extension) {
   })
 }
 
-var mappings = {
+var extensionMappings = {
   '.rb': '.ruby',
   '.h': '.objc',
   '.m': '.objc',
@@ -65,9 +65,21 @@ var mappings = {
   '.py': '.python'
 }
 
+var fileMappings = {
+  'makefile': '.makefile'
+}
+
 hl.map = function (extension) {
-  if (extension.indexOf('.') === -1) extension = '.' + extension
-  return 'source' + (mappings[extension] || extension)
+  if (fileMappings[extension.toLowerCase()]) {
+    return 'source' + fileMappings[extension.toLowerCase()]
+  } else {
+    if (extension.indexOf('.') === -1) extension = '.' + extension
+    return 'source' + (extensionMappings[extension] || extension)
+  }
+}
+
+hl.mapFile = function (file) {
+  return 'source' + (fileMappings[file.toLowerCase()] || '.unknown')
 }
 
 hl.chalkify = function (codeHtml) {

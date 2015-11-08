@@ -18,8 +18,7 @@ var yargs = require('yargs')
   })
   .option('e', {
     alias: 'extension',
-    describe: 'when using unix pipes an extension hint must be provided',
-    default: 'js'
+    describe: 'when using unix pipes an extension hint must be provided'
   })
   .help('help')
   .alias('h', 'help')
@@ -47,13 +46,14 @@ if (argv.pipe) {
     code += out
   })
   process.stdin.on('end', function () {
-    output(code, argv.extension)
+    var extension = argv.extension ? argv.extension : 'js'
+    output(code, extension)
     process.exit(0)
   })
 } else if (argv._.length) {
   var file = argv._[0]
-  var extension = path.extname(file)
-  output(fs.readFileSync(file, 'utf-8'), extension)
+  var extension = argv.extension || path.extname(file)
+  output(fs.readFileSync(file, 'utf-8'), extension || path.basename(file))
 }
 
 function output (code, extension) {
