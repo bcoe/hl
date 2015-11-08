@@ -1,7 +1,7 @@
 var _ = require('lodash')
 var chalk = require('chalk')
 var cheerio = require('cheerio')
-var Highlights = require('highlights')
+var Highlights = require('atom-highlightsjs')
 var highlighter = new Highlights()
 
 var languages = [

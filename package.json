@@ -28,10 +28,10 @@
   },
   "homepage": "https://github.com/bcoe/hl#readme",
   "dependencies": {
+    "atom-highlightsjs": "^1.3.0",
     "atom-language-nginx": "^0.4.0",
     "chalk": "^1.1.1",
     "cheerio": "^0.19.0",
-    "highlights": "^1.3.0",
     "language-dart": "^0.1.1",
     "language-erlang": "^2.0.0",
     "language-glsl": "^2.0.1",
