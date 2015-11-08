@@ -14,13 +14,14 @@ npm install hl -g
 
 Provides syntax highlighting for:
 
-* JavaScript
-* Ruby
-* JSON
-* ObjectiveC
 * CPP
+* JavaScript
+* JSON
+* Makefile
 * Markdown
+* ObjectiveC
 * Python
+* Ruby
 
 Open an [issue](https://github.com/bcoe/hl/issues/new) or [pull-request](https://github.com/bcoe/hl/compare) if we're missing a language you'd like to see!
 
