@@ -10,6 +10,11 @@ describe('hl', function () {
       assert.equal(hl.map('.rb'), 'source.ruby')
       assert.equal(hl.map('.json'), 'source.json')
     })
+
+    it('highlights based on common filnames if no extension is found', function () {
+      assert.equal(hl.map('makefile'), 'source.makefile')
+      assert.equal(hl.map('Makefile'), 'source.makefile')
+    })
   })
 
   describe('chalkify', function () {
