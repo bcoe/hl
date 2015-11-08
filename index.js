@@ -78,10 +78,6 @@ hl.map = function (extension) {
   }
 }
 
-hl.mapFile = function (file) {
-  return 'source' + (fileMappings[file.toLowerCase()] || '.unknown')
-}
-
 hl.chalkify = function (codeHtml) {
   var $ = cheerio.load(codeHtml)
   var lines = []
